@@ -1,0 +1,7 @@
+body {font-family:Arial, Helvetica, Sans-Serif;}
+p {font-size:16px; line-height:22px;}
+.container {max-width:1200px; margin:0 auto;}
+.row {width:100%; padding:20px 0;}
+a.show {background:#168DD9; display:inline-block; padding:20px; cursor:pointer; margin:0 5px 10px 0; color:white;}
+a.show:hover, a.show-active {background:#0E5C8C;}
+.section {background:#eee; padding:20px;}

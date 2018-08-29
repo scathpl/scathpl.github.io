@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+	<title>Projekt - Dominik Nalepa </title>
+	<link  rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        
+                $(document).ready(function(){
+                    //ukrycie innych niz 1
+                    $('.section').not("#section1").hide();
+                    //pokazanie po klinieciu
+                    $('.show').click(function () {
+                        $("a.show-active").removeClass("show-active");
+                        $(this).addClass("show-active");
+                        $('#section' + $(this).attr('target')).fadeIn(300).siblings('.section').hide();;
+                    });
+
+
+                });
+    </script>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <a class="show show-active" target="1">O mnie</a>
+    <a class="show" target="2">Strony internetowe</a>
+    <a class="show" target="3">Grafika</a>
+  </div>
+</div>
+<div class="container">
+  <div class="section" id="section1">
+    <h1>Section 1</h1>
+    <p>Curabitur sed nunc ac justo iaculis condimentum. Nunc convallis tempor faucibus. Nulla ultrices libero quis ipsum mattis molestie. Nam varius, nulla tristique facilisis eleifend, elit odio dapibus nisi, eget convallis nisi augue non dui. Pellentesque semper elementum enim, et hendrerit nunc convallis id. Curabitur a magna pharetra, viverra neque nec, lobortis ligula. Vestibulum eget tempor enim. Aliquam et cursus neque.</p>
+  </div>
+  <div class="section" id="section2">
+    <h1>Section 2</h1>
+    <p>Duis varius mollis fringilla. Proin a vehicula metus. Nam ornare ipsum justo, non placerat ligula consectetur sit amet. Curabitur suscipit ligula porttitor nisi mollis imperdiet. Sed blandit sapien in est tristique, eu bibendum arcu cursus. Aenean iaculis lorem vulputate libero egestas ornare. Aenean auctor vehicula lorem, in mollis ex scelerisque vitae. In hac habitasse platea dictumst. Nulla accumsan tristique eros, non dapibus turpis sollicitudin nec. Etiam a turpis sit amet purus feugiat vestibulum id at nisl. Cras vitae lacus massa. Integer eu ex efficitur, cursus magna quis, dignissim erat.</p>
+  </div>
+  <div class="section" id="section3">
+    <h1>Section 3</h1>
+    <p>Proin placerat sem est, volutpat ornare diam vestibulum at. Aenean non sapien volutpat, consequat turpis ut, condimentum metus. Aliquam luctus dui et urna suscipit pharetra. Proin viverra lacus sed semper accumsan. Nam urna ante, vehicula nec dui eget, consequat elementum orci. Nam in feugiat diam, ut vestibulum metus. Morbi dapibus commodo congue. Integer ut finibus tortor.</p>
+  </div>
+
+</div>
+	
+</body>
+</html>
