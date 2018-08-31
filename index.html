@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-	<title>Projekt - Dominik Nalepa </title>
+	<title>Portfolio DN</title>
 	<link  rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 
@@ -11,12 +13,12 @@
         
                 $(document).ready(function(){
                     //ukrycie innych niz 1
-                    $('.section').not("#section1").hide();
+                    $('.tresc').not("#tresc1").hide();
                     //pokazanie po klinieciu
-                    $('.show').click(function () {
-                        $("a.show-active").removeClass("show-active");
-                        $(this).addClass("show-active");
-                        $('#section' + $(this).attr('target')).fadeIn(300).siblings('.section').hide();;
+                    $('.pokaz').click(function () {
+                        $("a.aktywny").removeClass("aktywny");
+                        $(this).addClass("aktywny");
+                        $('#tresc' + $(this).attr('target')).fadeIn(300).siblings('.tresc').hide();;
                     });
 
 
@@ -26,28 +28,230 @@
 <body>
 
 
-<div class="container">
-  <div class="row">
-    <a class="show show-active" target="1">O mnie</a>
-    <a class="show" target="2">Strony internetowe</a>
-    <a class="show" target="3">Grafika</a>
+
+<nav class="kontener">
+  <div class="rzad">
+    <a class="pokaz aktywny" target="1">O mnie</a>
+    <a class="pokaz" target="2">Skrypty i strony</a>
+    <a class="pokaz" target="3">Grafika</a>
+    <a class="pokaz" target="4">Kontakt</a>
   </div>
-</div>
-<div class="container">
-  <div class="section" id="section1">
-    <h1>Section 1</h1>
-    <p>Curabitur sed nunc ac justo iaculis condimentum. Nunc convallis tempor faucibus. Nulla ultrices libero quis ipsum mattis molestie. Nam varius, nulla tristique facilisis eleifend, elit odio dapibus nisi, eget convallis nisi augue non dui. Pellentesque semper elementum enim, et hendrerit nunc convallis id. Curabitur a magna pharetra, viverra neque nec, lobortis ligula. Vestibulum eget tempor enim. Aliquam et cursus neque.</p>
+</nav>
+
+<div class="kontener">
+  <div class="tresc" id="tresc1">
+    <h1>O mnie</h1>
+      
+    <div id="meImg"> 
+        <img alt="zdjecie" src="img/zdjecie.jpg">
+    </div> 
+    <p>
+        Cześć! Jestem Dominik, 21-letni student trzeciego roku Informatyki na Uniwersytecie Pedagogicznym im. KEN w Krakowie. Swoją przyszłość wiążę z projektowaniem stron internetowych, a konkretniej z frontend'em. Interesuję się piłką nożną i filmem, w wolnym czasie lubię także "podłubać" w Photoshopie. Od niedawna uczę się także gry na keyboardzie.
+</p>
+      
+      
+      <h2>Obecnie w stopniu przynajmniej podstawowym znam:</h2>
+      
+      <ul>
+          <li>HTML</li>
+          <li>CSS3 (wraz z media queries oraz flexbox)</li>
+          <li>Bootstrap</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>PHP</li>
+      </ul>
+     
+      
   </div>
-  <div class="section" id="section2">
-    <h1>Section 2</h1>
-    <p>Duis varius mollis fringilla. Proin a vehicula metus. Nam ornare ipsum justo, non placerat ligula consectetur sit amet. Curabitur suscipit ligula porttitor nisi mollis imperdiet. Sed blandit sapien in est tristique, eu bibendum arcu cursus. Aenean iaculis lorem vulputate libero egestas ornare. Aenean auctor vehicula lorem, in mollis ex scelerisque vitae. In hac habitasse platea dictumst. Nulla accumsan tristique eros, non dapibus turpis sollicitudin nec. Etiam a turpis sit amet purus feugiat vestibulum id at nisl. Cras vitae lacus massa. Integer eu ex efficitur, cursus magna quis, dignissim erat.</p>
+  <div class="tresc" id="tresc2">
+    <h1>Skrypty i strony</h1>
+    <p>Poniżej znajdują się niektóre z moich projektów:</p>
+      
+      
+      <div id="skrypty">
+          
+           <a href="https://dn-skaut.000webhostapp.com/index.html" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/skauting.PNG" alt="stronaSkauting">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Baza danych sieci skautów klubu piłkarskiego</strong><br>
+                    Projekt obsługi prostej bazy danych MySql z wykorzystaniem PHP oraz Bootstapa.</p>
+            </div>
+        </div></a>
+          
+           <a href="https://dn-skaut.000webhostapp.com/index.html" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/skauting.PNG" alt="lotek">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Lotek</strong><br>
+                    Prosty skrypt symulujący działanie lotka napisany w języku JavaScript.</p>
+            </div>
+        </div></a>
+          
+          
+          
+          <a href="https://dn-skaut.000webhostapp.com/index.html" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/skauting.PNG" alt="zegary">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Zegary</strong><br>
+                    Prosty skrypt napisany w języku JavaScript.</p>
+            </div>
+        </div></a>
+          
+          
+          
+          <a href="https://dn-skaut.000webhostapp.com/index.html" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/skauting.PNG" alt="lotek">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Lotek</strong><br>
+                    Prosty skrypt symulujący działanie lotto napisany w języku JavaScript.</p>
+            </div>
+        </div></a>
+
+        
+        
+        
+        
+        
+      
+      
+      </div>
+      
+      
   </div>
-  <div class="section" id="section3">
-    <h1>Section 3</h1>
-    <p>Proin placerat sem est, volutpat ornare diam vestibulum at. Aenean non sapien volutpat, consequat turpis ut, condimentum metus. Aliquam luctus dui et urna suscipit pharetra. Proin viverra lacus sed semper accumsan. Nam urna ante, vehicula nec dui eget, consequat elementum orci. Nam in feugiat diam, ut vestibulum metus. Morbi dapibus commodo congue. Integer ut finibus tortor.</p>
+  <div class="tresc" id="tresc3">
+    <h1>Grafika</h1>
+    <p>Przykładowe projekty graficzne wykonane w programie Adobe Photoshop:</p>
+      
+      
+      
+      
+      
+          <div id="grafiki">
+          
+           <a href="img/eden.jpg" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/eden.jpg" alt="hazard_wallpaper">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Eden Hazard</strong><br>
+                    Tapeta na pulpit z zawodnikiem londyńskiej Chelsea.</p>
+            </div>
+        </div></a>
+              
+              
+              
+              
+               <a href="img/legends.jpg" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/leg169.jpg" alt="legends_wall">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Legends</strong><br>
+                    Tapeta na pulpit z trzema wielkimi piłkarzami, którzy jednak nie zawsze grali fair.</p>
+            </div>
+        </div></a>
+              
+              
+              
+               <a href="img/wrz16.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/wrz16.png" alt="call_september2016">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Wrzesień 2016</strong><br>
+                    Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea FC.</p>
+            </div>
+        </div></a>
+              
+              
+              
+               <a href="img/kw17.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/kw17.png" alt="call_april2017">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Kwiecień 2017</strong><br>
+                    Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea FC.</p>
+            </div>
+        </div></a>
+              
+              
+              
+               <a href="img/aguero.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/aguero.png" alt="aguero_sign">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Sergio Aguero</strong><br>
+                    Sygnatura forumowa z zawodnikiem Manchesteru City.</p>
+            </div>
+        </div></a>
+              
+                   <a href="img/torres.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/torres.png" alt="ozil_sign">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Fernando Torres</strong><br>
+                    Sygnatura forumowa z hiszpańskim goleadorem.</p>
+            </div>
+        </div></a>
+              
+              
+                 <a href="img/kerr.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/kerr.png" alt="kerr_sign">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Miranda Kerr</strong><br>
+                    Sygnatura forumowa z australijską modelką.</p>
+            </div>
+        </div></a>
+              
+              
+              
+               <a href="img/ba.png" target="_blank"> <div class="img_hoverek">
+             
+                <img src="img/ba.png" alt="ba_sign">
+            <div class="opis">
+                <p class="opistxt">
+                    <strong>Demba Ba</strong><br>
+                    Sygnatura forumowa z senegalskim napastnikiem.</p>
+            </div>
+        </div></a>  
+      </div>
+      
+      
+      
+      
+      
+      
+      
+  </div>
+    
+    <div class="tresc" id="tresc4">
+    <h1>Kontakt</h1>
+    <p>Jeżeli chcesz się ze mną skontaktować wybierz jedną z poniższych opcji:</p>
+        
+    <div id="kontakt">
+        <a href="mailto:d.nalepa@interia.pl"  ><img src="img/email.png" alt="email" id="email"></a>
+        <a href="https://www.facebook.com/skaaaf" target="_blank"  ><img src="img/fb.png" alt="facebook" id="fb"></a>
+        <a href="https://www.instagram.com/scafley/" target="_blank"  ><img src="img/ig.png" alt="insta" id="ig"></a>
+    </div>    
   </div>
 
 </div>
+
+<footer class="kontener">
+    2018 © Dominik Nalepa
+</footer>
 	
 </body>
 </html>
