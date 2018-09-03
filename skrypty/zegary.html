@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Zegary</title>
+	<link  rel="stylesheet" href="css/zegary.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">    
+  
+        
+            var sec = 0;
+        
+function czas() {
+    var datka = new Date();
+    
+    var h = datka.getHours();
+    var m = datka.getMinutes();
+    var s = datka.getSeconds();
+    
+    if(h<10) h="0"+h;
+    if(m<10) m="0"+m;
+    if(s<10) s="0"+s;
+
+    document.getElementById('godzina').innerHTML = h + ":" + m + ":" + s;
+    
+    sec += 1;
+    sek = sec%60;
+    min = parseInt(sec/60);
+    if(min<1)           document.getElementById('przebywasz').innerHTML = sek + " sekund";
+    else if (min>=1)    document.getElementById('przebywasz').innerHTML = min + " min i " + sek + " sekund";
+        
+}
+           setInterval(czas, 1000);    
+    </script>
+</head>
+<body onload="czas()">
+
+
+
+<div class="kontener">
+  <div class="tresc" id="tresc1">
+    <h1>Zegary</h1>
+      
+      
+      
+      <h2>Obecna godzina:</h2>
+      
+      
+      <div id="godzina"></div>
+      
+      <h2>Na stronie przebywasz:</h2>
+      
+      
+      <div id="przebywasz"></div>
+     
+      
+  </div>   
+      
+  </div>
+    
+
+<footer class="kontener">
+    2018 © Dominik Nalepa
+</footer>
+	
+</body>
+</html>

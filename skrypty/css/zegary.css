@@ -1,0 +1,50 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+
+.kontener {
+	max-width:1040px; 
+	margin:0 auto;
+}
+
+
+
+footer{
+	padding: 20px;
+	font-weight: normal;
+	text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+
+.tresc {
+    background:#f1f1f1; 
+    padding:1.5em;
+}
+
+#tresc1{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tresc1 h1{
+    width: 100%;
+}
+
+
+
+
+h2{width:100%;
+text-align: center;}
+
+#godzina, #przebywasz{
+    width:100%;
+    text-align: center;
+    
+}
