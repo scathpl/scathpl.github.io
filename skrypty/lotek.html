@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Lotek</title>
+	<link  rel="stylesheet" href="css/lotek.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">    
+        ////////////////////////////////////
+        function sortliczb(a, b)
+        {
+            return a - b;
+        }
+        ////////////////////////////////////
+        function pierwsza(){
+            
+        let liczby = []; 
+            
+        const pierwsza = document.getElementById('pierwsza').value;
+        const druga =  document.getElementById('druga').value;
+        const trzecia =  document.getElementById('trzecia').value;
+        const czwarta =  document.getElementById('czwarta').value;
+        const piata =  document.getElementById('piata').value;
+        const szosta =  document.getElementById('szosta').value;      
+        
+         
+            
+        liczby.push(pierwsza);
+        liczby.push(druga);
+        liczby.push(trzecia);
+        liczby.push(czwarta);
+        liczby.push(piata);
+        liczby.push(szosta);
+        
+        sort_liczby = liczby.sort(sortliczb);   
+
+            
+        poprawnosc:{
+            
+        for(let i=0; i<6; i++){
+            if(isNaN(sort_liczby[i]) || sort_liczby[i] > 49 || sort_liczby[i]<=0)
+                {
+                alert("Błąd, podaj LICZBY z przedziału 1-49!")
+                break poprawnosc;
+                }
+            if(sort_liczby[i]==sort_liczby[i+1]){
+                    alert("Błąd, liczby muszą być różne!")
+                    break poprawnosc;
+            }           
+        }
+            
+            alert("Twoje liczby to: "+sort_liczby);
+            document.getElementById('losowanie').style.visibility = "visible"; 
+        }
+        }
+        /////////////////////////////////////////////////////////////////////////////
+        
+        function losuj()
+        {
+            
+            let wylosowane = [];
+            
+            const los1 = Math.floor(Math.random() * 49) + 1;
+            let los2 = Math.floor(Math.random() * 49) + 1;
+            if(los2 == los1){
+                while(los2 == los1) los2 = Math.floor(Math.random() * 49) + 1;   
+            }
+            let los3 = Math.floor(Math.random() * 49) + 1;
+            if(los3 == los2 || los3 == los1){
+                while(los3 == los1 || los3 == los2) los3 = Math.floor(Math.random() * 49) + 1;   
+            }
+            let los4 = Math.floor(Math.random() * 49) + 1;
+           if(los4 == los3 || los4 == los2 || los4 == los1){
+               while(los4 == los3 || los4 == los2 || los4 == los1) los4 = Math.floor(Math.random() * 49) + 1;   
+            }
+            let los5 = Math.floor(Math.random() * 49) + 1;
+            if(los5 == los4 || los5 == los3 || los5 == los2 || los5 == los1){
+                while(los5==los4 || los5 == los3 || los5 == los2 || los5 == los1) los5 = Math.floor(Math.random() * 49) + 1;   
+            }
+            let los6 = Math.floor(Math.random() * 49) + 1;
+            if(los6==los5 || los6 == los4 || los6 == los3 || los6 == los2 || los6 == los1){
+                while(los6==los5 || los6==los4 || los6 == los3 || los6 == los2 || los6 == los1) los6 = Math.floor(Math.random() * 49) + 1;   
+            }
+     
+            
+                
+            wylosowane.push(los1);
+            wylosowane.push(los2);
+            wylosowane.push(los3);
+            wylosowane.push(los4);
+            wylosowane.push(los5);
+            wylosowane.push(los6);
+                
+            sort_wylosowane = wylosowane.sort(sortliczb);   
+                
+            
+           alert("Wylosowane liczby to: "+sort_wylosowane);
+        }
+        
+        function traf(){
+            
+            var licznik = 0;
+            for(let j=0;j<6;j++){
+                for(i=0;i<6;i++){
+                if(sort_liczby[j]==sort_wylosowane[i]) licznik=licznik+1;
+                }
+            }
+            
+            alert("Trafiłeś "+licznik +" liczb.")
+            
+        }
+        
+        
+    </script>
+</head>
+<body>
+
+
+
+<div class="kontener">
+  <div class="tresc" id="tresc1">
+    <h1>Lotto</h1>
+      
+  
+    <p>
+        Wytypuj 6 liczb z przedziału 1-49 i sprawdź czy wygrałeś.
+</p>
+      
+      
+      <h2>Twoje liczby:</h2>
+      
+      <input type="number" min="1" max="49" id="pierwsza">
+      <input type="number" min="1" max="49" id="druga">
+      <input type="number" min="1" max="49" id="trzecia">
+      <input type="number" min="1" max="49" id="czwarta">
+      <input type="number" min="1" max="49" id="piata">
+      <input type="number" min="1" max="49" id="szosta">
+     
+      <button onclick="pierwsza()">Zapisz</button><br>
+
+      
+      <div id="losowanie">
+      <button onclick="losuj(); traf();">Losuj</button>
+      </div>
+      
+  </div>   
+      
+  </div>
+    
+
+<footer class="kontener">
+    2018 © Dominik Nalepa
+</footer>
+	
+</body>
+</html>

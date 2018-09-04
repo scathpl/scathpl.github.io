@@ -1,0 +1,111 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+img{max-width: 100%; max-height: 270px;}
+p {
+	font-size:16px; 
+	line-height:22px;
+    font-weight: normal;
+}
+.kontener {
+	max-width:1040px; 
+	margin:0 auto;
+}
+
+
+
+footer{
+	padding: 20px;
+	font-weight: normal;
+	text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+
+.tresc {
+    background:#f1f1f1; 
+    padding:1.5em;
+}
+
+#tresc1{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tresc1 h1{
+    width: 100%;
+}
+
+
+
+#tresc1 p{
+    width: 75%;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+h2{width:100%;
+text-align: center;}
+
+
+#losowanie{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+
+    
+}
+ button{
+    width:100%;
+    margin-top: 50px;
+    padding: 10px;
+    background: yellow;
+    border: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+button:hover{
+    background: #FFE100;
+}
+
+
+@media screen and (max-width: 550px){
+
+
+      #tresc1 p{
+    width: 100%;
+    padding: 20px;
+    }
+    
+    input{
+        width: 100%;
+        margin-top: 10px;
+    }
+    button{
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    
+}
+
+
+@media screen and (min-width:551px) and (max-width: 960px){
+    
+    #tresc1 p{
+    width: 100%;
+    padding: 20px;
+    }
+    
+    
+}

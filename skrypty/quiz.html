@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Quiz Chelsea</title>
+	<link  rel="stylesheet" href="css/quiz.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">    
+     
+        
+function sprawdz() {
+    
+  const pyt1 = document.forms['quiz']['pyt1'].value;
+  const pyt2 = document.forms['quiz']['pyt2'].value;
+  const pyt3 = document.forms['quiz']['pyt3'].value;
+  const pyt4 = document.forms['quiz']['pyt4'].value;
+  const pyt5 = document.forms['quiz']['pyt5'].value;
+  const pyt6 = document.forms['quiz']['pyt6'].value;
+
+  const odpowiedzi = ["a","d","b","a","a","c"];
+  const max = 6;
+  let wynik = 0;
+
+  
+    for(i = 1; i <= max; i++) {
+        if (eval('pyt' + i) == odpowiedzi[i - 1])
+        {
+          wynik++;
+        }
+  }
+
+  const wyniki = document.getElementById('wynik');
+  wyniki.innerHTML = 'Zdobyłeś ' + wynik + ' pkt na ' + max +' możliwych';
+  return false;
+}
+        
+        
+    </script>
+</head>
+<body>
+
+
+
+<div class="kontener">
+  <div class="tresc" id="tresc1">
+    <h1>Quiz Chelsea FC</h1>
+      
+  
+    <p>
+        Zmierz swoją wiedzę z krótkim testem odnośnie klubu.
+</p>
+      
+      <div id="quizdiv">
+    
+    <form name="quiz" onsubmit="return sprawdz()">
+      <hr>
+      <h3>1. W którym roku powstał klub Chelsea FC?</h3>
+      <input type="radio" name="pyt1" value="a" id="pyt1a">a. 1905<br>
+      <input type="radio" name="pyt1" value="b" id="pyt1b">b. 1900<br>
+      <input type="radio" name="pyt1" value="c" id="pyt1c">c. 1895<br>
+      <input type="radio" name="pyt1" value="d" id="pyt1d">d. 1890<br>
+
+      <hr>
+      <h3>2. Jak nazywa się stadion Chelsea?</h3>
+      <input type="radio" name="pyt2" value="a" id="pyt2a">a. Old Trafford<br>
+      <input type="radio" name="pyt2" value="b" id="pyt2b">b. Chelsea Stadium<br>
+      <input type="radio" name="pyt2" value="c" id="pyt2c">c. Santiago Bernabeu<br>
+      <input type="radio" name="pyt2" value="d" id="pyt2d">d. Stamford Bridge<br>      
+      
+      <hr>
+      <h3>3. Ile tytułów mistrzowskich ma na koncie Chelsea?</h3>
+      <input type="radio" name="pyt3" value="a" id="pyt3a">a. 7<br>
+      <input type="radio" name="pyt3" value="b" id="pyt3b">b. 6<br>  
+      <input type="radio" name="pyt3" value="c" id="pyt3c">c. 5<br>
+      <input type="radio" name="pyt3" value="d" id="pyt3d">d. 4<br> 
+        
+    
+        
+      <hr>
+      <h3>4. Kto zdobył najwięcej bramek w historii klubu?</h3>
+      <input type="radio" name="pyt4" value="a" id="pyt4a">a. Frank Lampard<br>
+      <input type="radio" name="pyt4" value="b" id="pyt4b">b. Didier Drogba<br>  
+      <input type="radio" name="pyt4" value="c" id="pyt4c">c. Peter Osgood<br>
+      <input type="radio" name="pyt4" value="d" id="pyt4d">d. Bobby Tambling<br> 
+        
+        
+      <hr>
+      <h3>5. Jaki tytuł nosi hymn klubu?</h3>
+      <input type="radio" name="pyt5" value="a" id="pyt5a">a. Blue is the colour<br>
+      <input type="radio" name="pyt5" value="b" id="pyt5b">b. Blue Moon<br>  
+      <input type="radio" name="pyt5" value="c" id="pyt5c">c. You'll never walk alone<br>
+      <input type="radio" name="pyt5" value="d" id="pyt5d">d. The Liquidator<br> 
+        
+        
+      <hr>
+      <h3>6. Kto jest obecnym trenerem "The Blues"?</h3>
+      <input type="radio" name="pyt6" value="a" id="pyt6a">a. Antonio Conte<br>
+      <input type="radio" name="pyt6" value="b" id="pyt6b">b. Jose Mourinho<br>  
+      <input type="radio" name="pyt6" value="c" id="pyt6c">c. Maurizio Sarri<br>
+      <input type="radio" name="pyt6" value="d" id="pyt6d">d. Carlo Ancelotti<br> 
+      
+      <br><br>
+      <input type="submit" value="Sprawdź wynik">
+    </form>
+      
+           <div id="wynik"></div>
+      
+      </div>
+      
+ 
+      
+  </div>   
+      
+  </div>
+    
+
+<footer class="kontener">
+    2018 © Dominik Nalepa
+</footer>
+	
+</body>
+</html>

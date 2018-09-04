@@ -1,0 +1,98 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+img{max-width: 100%; max-height: 270px;}
+p {
+	font-size:16px; 
+	line-height:22px;
+    font-weight: normal;
+}
+.kontener {
+	max-width:1040px; 
+	margin:0 auto;
+}
+
+hr{
+    border-top: 3px solid #2d2d2d;
+    border-bottom: 2px solid #2102F5;
+    
+}
+
+footer{
+	padding: 20px;
+	font-weight: normal;
+	text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+
+.tresc {
+    background:#f1f1f1; 
+    padding:1.5em;
+}
+
+#tresc1{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tresc1 h1{
+    width: 100%;
+}
+
+
+
+#tresc1 p{
+    width: 75%;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+h2{width:100%;
+text-align: center;}
+
+
+
+
+#quizdiv{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#quizdiv form{
+    width: 100%;
+}
+
+#quizdiv h3{width:100%;}
+
+
+ input[type=submit]{
+    width:50%;
+    margin-top: 50px;
+    padding: 10px;
+    background: #2102F5;
+    border: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+input[type=submit]:hover{
+    background: #3A57FF;
+}
+
+#wynik{
+    width: 100%;
+    margin-top: 20px;
+    font-size:36px;
+}
