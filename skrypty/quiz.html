@@ -14,16 +14,16 @@
         
 function sprawdz() {
     
-  var pyt1 = document.forms['quiz']['pyt1'].value;
-  var pyt2 = document.forms['quiz']['pyt2'].value;
-  var pyt3 = document.forms['quiz']['pyt3'].value;
-  var pyt4 = document.forms['quiz']['pyt4'].value;
-  var pyt5 = document.forms['quiz']['pyt5'].value;
-  var pyt6 = document.forms['quiz']['pyt6'].value;
+  const pyt1 = document.forms['quiz']['pyt1'].value;
+  const pyt2 = document.forms['quiz']['pyt2'].value;
+  const pyt3 = document.forms['quiz']['pyt3'].value;
+  const pyt4 = document.forms['quiz']['pyt4'].value;
+  const pyt5 = document.forms['quiz']['pyt5'].value;
+  const pyt6 = document.forms['quiz']['pyt6'].value;
 
-  var odpowiedzi = ["a","d","b","a","a","c"];
-  var max = 6;
-  var wynik = 0;
+  const odpowiedzi = ["a","d","b","a","a","c"];
+  const max = 6;
+  let wynik = 0;
 
   
     for(i = 1; i <= max; i++) {
@@ -33,7 +33,7 @@ function sprawdz() {
         }
   }
 
-  var wyniki = document.getElementById('wynik');
+  const wyniki = document.getElementById('wynik');
   wyniki.innerHTML = 'Zdobyłeś ' + wynik + ' pkt na ' + max +' możliwych';
   return false;
 }

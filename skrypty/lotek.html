@@ -18,14 +18,14 @@
         ////////////////////////////////////
         function pierwsza(){
             
-        var liczby = []; 
+        let liczby = []; 
             
-        var pierwsza = document.getElementById('pierwsza').value;
-        var druga =  document.getElementById('druga').value;
-        var trzecia =  document.getElementById('trzecia').value;
-        var czwarta =  document.getElementById('czwarta').value;
-        var piata =  document.getElementById('piata').value;
-        var szosta =  document.getElementById('szosta').value;      
+        const pierwsza = document.getElementById('pierwsza').value;
+        const druga =  document.getElementById('druga').value;
+        const trzecia =  document.getElementById('trzecia').value;
+        const czwarta =  document.getElementById('czwarta').value;
+        const piata =  document.getElementById('piata').value;
+        const szosta =  document.getElementById('szosta').value;      
         
          
             
@@ -41,7 +41,7 @@
             
         poprawnosc:{
             
-        for(var i=0; i<6; i++){
+        for(let i=0; i<6; i++){
             if(isNaN(sort_liczby[i]) || sort_liczby[i] > 49 || sort_liczby[i]<=0)
                 {
                 alert("Błąd, podaj LICZBY z przedziału 1-49!")
@@ -62,26 +62,26 @@
         function losuj()
         {
             
-            var wylosowane = [];
+            let wylosowane = [];
             
-            var los1 = Math.floor(Math.random() * 49) + 1;
-            var los2 = Math.floor(Math.random() * 49) + 1;
+            const los1 = Math.floor(Math.random() * 49) + 1;
+            let los2 = Math.floor(Math.random() * 49) + 1;
             if(los2 == los1){
                 while(los2 == los1) los2 = Math.floor(Math.random() * 49) + 1;   
             }
-            var los3 = Math.floor(Math.random() * 49) + 1;
+            let los3 = Math.floor(Math.random() * 49) + 1;
             if(los3 == los2 || los3 == los1){
                 while(los3 == los1 || los3 == los2) los3 = Math.floor(Math.random() * 49) + 1;   
             }
-            var los4 = Math.floor(Math.random() * 49) + 1;
+            let los4 = Math.floor(Math.random() * 49) + 1;
            if(los4 == los3 || los4 == los2 || los4 == los1){
                while(los4 == los3 || los4 == los2 || los4 == los1) los4 = Math.floor(Math.random() * 49) + 1;   
             }
-            var los5 = Math.floor(Math.random() * 49) + 1;
+            let los5 = Math.floor(Math.random() * 49) + 1;
             if(los5 == los4 || los5 == los3 || los5 == los2 || los5 == los1){
                 while(los5==los4 || los5 == los3 || los5 == los2 || los5 == los1) los5 = Math.floor(Math.random() * 49) + 1;   
             }
-            var los6 = Math.floor(Math.random() * 49) + 1;
+            let los6 = Math.floor(Math.random() * 49) + 1;
             if(los6==los5 || los6 == los4 || los6 == los3 || los6 == los2 || los6 == los1){
                 while(los6==los5 || los6==los4 || los6 == los3 || los6 == los2 || los6 == los1) los6 = Math.floor(Math.random() * 49) + 1;   
             }
@@ -104,7 +104,7 @@
         function traf(){
             
             var licznik = 0;
-            for(j=0;j<6;j++){
+            for(let j=0;j<6;j++){
                 for(i=0;i<6;i++){
                 if(sort_liczby[j]==sort_wylosowane[i]) licznik=licznik+1;
                 }

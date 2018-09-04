@@ -15,11 +15,11 @@
             var sec = 0;
         
 function czas() {
-    var datka = new Date();
+    const datka = new Date();
     
-    var h = datka.getHours();
-    var m = datka.getMinutes();
-    var s = datka.getSeconds();
+    let h = datka.getHours();
+    let m = datka.getMinutes();
+    let s = datka.getSeconds();
     
     if(h<10) h="0"+h;
     if(m<10) m="0"+m;
