@@ -21,17 +21,17 @@ function czas() {
     let m = datka.getMinutes();
     let s = datka.getSeconds();
     
-    if(h<10) h="0"+h;
-    if(m<10) m="0"+m;
-    if(s<10) s="0"+s;
+    if(h<10) h=`0${h}`;
+    if(m<10) m=`0${m}`;
+    if(s<10) s=`0${s}`;
 
-    document.getElementById('godzina').innerHTML = h + ":" + m + ":" + s;
+    document.getElementById('godzina').innerHTML = `${h}:${m}:${s}`;
     
     sec += 1;
     sek = sec%60;
     min = parseInt(sec/60);
-    if(min<1)           document.getElementById('przebywasz').innerHTML = sek + " sekund";
-    else if (min>=1)    document.getElementById('przebywasz').innerHTML = min + " min i " + sek + " sekund";
+    if(min<1)           document.getElementById('przebywasz').innerHTML = `${sek} sekund`;
+    else if (min>=1)    document.getElementById('przebywasz').innerHTML = `${min} min i ${sek} sekund`;
         
 }
            setInterval(czas, 1000);    
