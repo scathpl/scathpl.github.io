@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Lift-gym</title>
+	<link  rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        
+        
+                 
+ const tablica = ['stock/1.jpg','stock/2.jpg','stock/3.jpg']; //tablica obrazków
+ const rozmiar = (tablica.length)-1;
+ let i = 1;
+//Zmień obrazek
+function zmienImg(){
+        
+        document.getElementById('galeriaimg').src = tablica[i];
+		if (i<rozmiar) i++;
+		else i=0;
+}
+
+        
+        
+     
+
+        
+        
+        function bmrLicz(){
+            
+        const waga = document.getElementById('waga').value;
+        const wzrost =  document.getElementById('wzrost').value;
+        const wiek =  document.getElementById('wiek').value;
+        const plec = document.querySelector('input[name="plec"]:checked').value; 
+        const aktywnosc = document.querySelector('input[name="aktyw"]:checked').value;   
+        /////////////////////////////////PLEC
+        if(plec == 'k'){
+          let wynik = parseFloat(10*waga + (6.25*wzrost)-(5*wiek)-161);
+        } 
+        else{wynik = parseFloat(10*waga + (6.25*wzrost)-(5*wiek)+5);}  
+        /////////////////////////////////////////////AKTYWNOSC
+        if(aktywnosc=='niska'){
+            wynik_d=wynik*1.4;
+            wynik_g=wynik*1.69;
+        }
+        if(aktywnosc=='srednia'){
+            wynik_d=wynik*1.7;
+            wynik_g=wynik*1.99;
+        } 
+        if(aktywnosc=='wysoka'){
+            wynik_d=wynik*2;
+            wynik_g=wynik*2.4;
+        }     
+           
+        /////////////////////////ZAOKRAGLENIE 
+        wynik_d=Math.round(wynik_d);   
+        wynik_g=Math.round(wynik_g); 
+        alert(`Twoje dzienne zapotrzebowanie KCAL mieści się w przedziale: ${wynik_d}-${wynik_g}.`) ;  
+            
+        }
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+
+<header class="kontener">
+<div id="logo">
+    <img src="logo.jpg" alt="logo">
+</div>
+<nav class="kontener">
+  <div class="rzad">
+    <a class="pokaz" href="#tresc1">O nas</a>
+    <a class="pokaz" href="#galeria">Galeria</a>
+    <a class="pokaz" href="#BMR">Oblicz BMR</a> 
+    <a class="pokaz" href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+    
+    
+</header>
+    
+
+<div class="kontener">
+  <div class="tresc" id="tresc1">
+      
+<div class="slider" id="galeria">
+  <div class="slide">
+    <img src="stock/1.jpg" alt="" id="galeriaimg" />
+  </div>
+    
+    <div id="zmienobr">
+      	<button onclick="zmienImg()" class="submit" type="button"> Pokaż kolejne zdjęcie</button>
+    </div>
+
+    
+</div>
+      
+      
+    <h1>O nas</h1>
+      
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus velit, congue sollicitudin diam in, condimentum rutrum eros. Duis maximus ipsum a leo scelerisque facilisis. Phasellus in gravida ex, et fermentum nulla. Sed varius diam ac libero bibendum, eget feugiat dolor scelerisque. Aenean dignissim erat ut lectus posuere auctor. Ut feugiat facilisis magna nec faucibus. In in ornare arcu. In fermentum sapien dui, ut sodales leo dapibus ac. Vivamus pellentesque dolor ut tempus efficitur. Donec ac fringilla quam, vel fringilla libero. Sed et ultrices lacus. Nunc condimentum, ligula vitae ullamcorper dignissim, felis nunc interdum nisl, eget congue ipsum metus et lorem.
+</p><p>
+        Mauris egestas tempus ullamcorper. Nunc finibus semper ipsum nec hendrerit. Mauris sollicitudin interdum justo ac varius. Donec varius id sapien in facilisis. Vivamus feugiat quis dolor sed ornare. Curabitur quis nisl eros. Integer finibus in arcu in lobortis. Ut massa ante, tincidunt ac magna bibendum, mollis viverra metus. Etiam tincidunt pharetra sagittis. Nunc pharetra posuere enim, vitae pulvinar risus blandit id. Phasellus viverra lacus eu sapien egestas lobortis. Mauris porta, velit ac ultrices pellentesque, lacus tortor viverra velit, non rhoncus felis orci ut arcu.
+</p>
+      
+      
+
+     
+      
+  </div>
+
+  
+<div class="tresc" id="BMR">
+    <h1>Oblicz BMR</h1>
+    <p>Oblicz swoje zapotrzebowanie kaloryczne</p>
+        
+   <input type="number" min="1" max="500" placeholder="Waga w kg"id="waga">
+   <input type="number" min="1" max="250" placeholder="Wzrost w cm"id="wzrost">
+   <input type="number" min="1" max="159" placeholder="Wiek" id="wiek"><br>
+   <input type="radio" name="plec" value="m" checked> Mężczyzna
+   <input type="radio" name="plec" value="k"> Kobieta<br><hr>
+   <input type="radio" name="aktyw" value="niska" checked> Niska aktywność fizyczna<br>
+   <input type="radio" name="aktyw" value="srednia"> Średnia aktywność fizyczna<br>
+   <input type="radio" name="aktyw" value="wysoka"> Wysoka aktywność fizyczna<br>
+     
+      <button class="submit" onclick="bmrLicz()">Oblicz</button><br>
+				
+
+  </div>  
+              
+    
+    
+         
+    
+
+    <div class="tresc" id="kontakt">
+    <h1>Kontakt</h1>
+    <p>Napisz do nas e-mail, a odpowiemy ASAP!</p>
+        
+<a href="mailto:d.nalepa@interia.pl"><button class="submit">WYŚLIJ</button></a>
+				
+
+  </div>
+
+</div>
+
+<footer class="footer kontener">
+    2018 © Dominik Nalepa
+</footer>
+	
+</body>
+</html>
