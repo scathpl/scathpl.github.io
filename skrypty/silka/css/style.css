@@ -1,0 +1,218 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+img{max-width: 100%;}
+header{
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width:50%;
+}
+
+
+.slider{
+    margin-top: 30px;
+    width:100%;
+    
+}
+
+
+
+
+p {
+	font-size:16px; 
+	line-height:22px;
+    font-weight: normal;
+    text-align: center;
+}
+.kontener {
+	max-width:1040px; 
+	margin:0 auto;
+    text-align: center;
+}
+.rzad {width:100%; 
+	padding:1.5em 0;
+}
+
+nav{
+    text-align: center;
+    width: 50%;
+}
+nav a{
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+footer{
+	padding: 20px;
+	font-weight: normal;
+	text-align: center;
+    font-size: 0.9em;
+}
+
+
+a.pokaz { 
+    padding:1.0em; 
+    cursor:pointer; 
+    margin:0 15px 20px 0; 
+    color: #2d2d2d;
+}
+
+a.pokaz:hover{
+    border-bottom: 4px solid #f1c40f;
+}
+
+.tresc {
+    border-left: 1px dotted #f1c40f; 
+    border-right: 1px dotted #f1c40f; 
+    padding:1.5em;
+}
+
+#tresc1{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tresc1 h1{
+    width: 100%;
+}
+
+hr{
+    width:50%;
+    border: 1px dotted #f1c40f;
+}
+
+
+
+
+.submit{
+    width: 50%;
+    background: #f1c40f;
+    border: 0px;
+    min-width: 58px;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+.submit:hover{
+    opacity: 0.6;
+}
+
+input{
+    margin-bottom: 10px;
+   text-align:center;
+    border: 1px solid #f1c40f;
+}
+
+input[type=number]{
+    width:50%;
+    padding: 10px;
+}
+
+
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #f1c40f;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+#kontakt{
+    margin-bottom: 50px;
+}
+
+
+
+
+/************************** HOVER OBRAZKOW GALERIA/SKRYPT*/
+.img_hoverek {
+  position: relative;
+  width: 100%;
+  max-height: 270px;
+}
+
+.opis {
+    max-height: 270px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 92, 140, 0.85);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img_hoverek:hover .opis {
+  visibility: visible;
+  opacity: 1;
+}
+
+.opistxt {
+  transition: .1s;
+  transform: translateY(1em);
+}
+
+.img_hoverek:hover .opistxt {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+@media screen and (max-width: 960px){
+  
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    
+    nav{
+        
+    }
+    #logo{
+        width: 100%;
+    }
+    
+    a.pokaz{
+        text-align: center;
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+    }
+
+
+
+}

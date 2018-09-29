@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+	<title>Piłkarska legenda</title>
+	<link  rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        
+
+        
+          $(document).ready(function(){
+                    //ukrycie onready
+                      $('#nav').hide();
+                      $('#karta').hide();
+              
+              
+            
+              
+                });
+        
+function selEnable(){
+    
+    document.getElementById("pozSelect").disabled = false;
+}        
+        
+        
+
+function resizeHeaderOnScroll() {
+  const distanceY = window.pageYOffset || document.documentElement.scrollTop;
+    
+    const headerEl = document.getElementById('header');
+    const tytu = document.getElementById('tytul');
+    const podtyt = document.getElementById('podtytul');
+  if (distanceY > 200) {
+    headerEl.classList.add("smaller");
+    tytu.classList.add("small");
+    podtyt.classList.add("small");
+    $('#nav').show();
+   
+  } else {
+    headerEl.classList.remove("smaller");
+    tytu.classList.remove("small");
+    podtyt.classList.remove("small");
+    $('#nav').hide();
+  }
+}
+
+window.addEventListener('scroll', resizeHeaderOnScroll);
+        
+        
+        
+        
+        
+        ////////////////////////////////
+        
+   
+        
+        
+        
+    </script>
+</head>
+<body id="home">
+
+
+
+<header id="header" class="defaulcik">
+    <div id="headerTxt" class="kontener">
+        
+  <h1 id="tytul" class=""><a href="index.html">Piłkarska legenda</a></h1>
+        
+            
+<nav id="nav">
+    <a class="pokaz aktywny" href="#home">Home </a>
+    <a class="pokaz" href="#losuj">Losuj </a>
+    <a class="pokaz" href="#kontakt">Kontakt </a>
+</nav>
+        
+        <p id="podtytul">Wylosuj swoją kartę legendy futbolu.</p>
+
+    </div>
+    
+
+    
+    
+
+    
+    
+    
+</header>
+    
+<nav id="nav" class="mobile">
+    <a class="pokaz aktywny" href="#home">Home </a>
+    <a class="pokaz" href="#losuj">Losuj </a>
+    <a class="pokaz" href="#kontakt">Kontakt </a>
+</nav>
+
+    
+    
+<div class="kontener">
+  <div class="tresc" id="losuj">
+    <h1>Losuj</h1>
+      
+    
+    <p>
+        Jesteś fanem piłkarskich gier elektronicznych? A więc na pewno słyszałeś o trybach takich jak FUT czy MyClub. Grając w tych rozgrywkach na pewno jednym z Twoich marzeń było wylosowanie jednej z legend piłkarskiej historii, jednak okazja na taki traf nie pojawia się zbyt często. Strona ta ma na celu dać Ci w dowolnym momencie tę okazję. Do dzieła!
+</p>
+      
+      
+ 
+     <div id="losowanie">
+      <button class="submit" onclick="losuj()">LOSUJ LEGENDĘ</button>
+      <button class="submit" onclick="selEnable()">WYBIERZ POZYCJĘ [OPCJONALNE]</button>
+      
+      
+      
+      <div id="pozycja">
+<select disabled id="pozSelect" onchange="losuj()">
+  <option value="1">Wszystkie pozycje</option>
+  <option value="2">Bramkarz</option>
+  <option value="3">Obrońca</option>
+  <option value="4">Pomocnik</option>
+  <option value="5">Napastnik</option>
+</select>
+      
+      </div>
+      </div>
+      
+      
+     <div id="karta">
+       
+         
+      <div id="kartaTresc">
+         <div id="zdjK"></div>
+         <div id="imieK"></div>
+         <div id="krajK"></div>
+        <div id="pozK"></div>
+      </div>
+          
+         
+         
+         
+         
+         <div id="kartaNapis"></div>
+         
+         
+         
+         
+         <script>
+             
+        function randomik(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }   
+        
+        function losuj(){ 
+        
+        $('#karta').show();
+            
+        const selectV = document.getElementById("pozSelect");
+        let valueSel = selectV.options[selectV.selectedIndex].value;  
+        let los; 
+            
+        if(valueSel == 1) los = randomik(1,13);  
+        if(valueSel == 2) los = randomik(10,13); 
+        if(valueSel == 3) los = randomik(7,10); 
+        if(valueSel == 4) los = randomik(4,7); 
+        if(valueSel == 5) los = randomik(1,4); 
+        
+        const pil1 = '{"name":"PELE", "img":"pele.png", "kraj":"BRAZYLIA", "poz":"N"}'; 
+        const pil2 = '{"name":"RONALDO", "img":"ronaldo.png", "kraj":"BRAZYLIA", "poz":"N"}'; 
+        const pil3 = '{"name":"MARADONA", "img":"maradona.png", "kraj":"ARGENTYNA", "poz":"N"}';
+        
+        const pil4 = '{"name":"RONALDINHO", "img":"ronaldinho.png", "kraj":"BRAZYLIA", "poz":"P"}'; 
+        const pil5 = '{"name":"HAGI", "img":"hagi.png", "kraj":"RUMUNIA", "poz":"P"}'; 
+        const pil6 = '{"name":"GULLIT", "img":"gullit.png", "kraj":"HOLANDIA", "poz":"P"}'; 
+            
+        const pil7 = '{"name":"MALDINI", "img":"maldini.png", "kraj":"WŁOCHY", "poz":"O"}'; 
+        const pil8 = '{"name":"MOORE", "img":"moore.png", "kraj":"ANGLIA", "poz":"O"}'; 
+        const pil9 = '{"name":"ZANETTI", "img":"zanetti.png", "kraj":"ARGENTYNA", "poz":"O"}'; 
+            
+        const pil10 = '{"name":"VAN DER SAR", "img":"vds.png", "kraj":"HOLANDIA", "poz":"B"}'; 
+        const pil11 = '{"name":"SCHMEICHEL", "img":"schmeichel.png", "kraj":"DANIA", "poz":"B"}'; 
+        const pil12 = '{"name":"YASHIN", "img":"yashin.png", "kraj":"ZSRR", "poz":"B"}'; 
+            
+        let obj_test = eval('pil'+los);      
+        let obj = JSON.parse(obj_test);
+        document.getElementById("imieK").innerHTML = obj.name;
+        document.getElementById("zdjK").innerHTML = `<img src="karty/${obj.img}">`;
+        document.getElementById("krajK").innerHTML = obj.kraj;
+        document.getElementById("pozK").innerHTML = obj.poz;
+        document.getElementById("kartaNapis").innerHTML = obj.name;
+         }
+         
+             
+             
+         </script>
+      </div>  
+  </div>
+
+  
+
+    
+    <div class="tresc" id="kontakt">
+    <h1>Kontakt</h1>
+    <p>Wypełnij formularz kontaktowy, odpowiadamy w terminie do 2 dni roboczych:</p>
+        
+  <form class="form">
+				<input type="text" name="name" placeholder="Imię" >
+				<input type="text" name="surname" placeholder="Nazwisko">
+				<input type="text" name="email" placeholder="E-mail">
+				<textarea name="msg" placeholder="Treść wiadomości"></textarea>
+	
+				<button class="submit">WYŚLIJ</button>
+		</form>
+
+  </div>
+
+</div>
+
+<footer class="kontener">
+    <p>
+    2018 © Dominik Nalepa </p>
+    
+<ul>
+    <li><a class="pokaz aktywny" href="#home">Home </a></li>
+    <li><a class="pokaz" href="#losuj">Losuj </a></li>
+    <li><a class="pokaz" href="#kontakt">Kontakt </a></li>
+</ul>
+    
+</footer>
+	
+</body>
+</html>

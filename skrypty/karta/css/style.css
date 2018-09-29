@@ -1,0 +1,396 @@
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+}
+a {text-decoration: none;
+color:#FFF;
+}
+
+.kontener {
+	max-width:1040px; 
+	margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{text-transform: uppercase;
+color: #0da37e;}
+
+
+#header {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+	top: 0;
+	left: 0;
+	z-index: 999;
+    color: #FFF;
+	background-color: #0da37e;
+	transition: height 0.5s;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+#header:after{
+    content : "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../image.jpg');
+    width: 100%;
+    height: 100%;
+    opacity : 0.15;
+    z-index: -1;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+    
+#headerTxt{
+    width: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center; 
+}
+/*tytul*/
+
+#tytul{
+    margin-left: 20px;
+    width: 70%;
+    font-size: 130px;
+}
+#tytul a{text-decoration: none; color: #FFF;}
+#tytul.small{
+    font-size: 20px;
+    margin-top: 96px;
+    width: 50%;
+}
+
+
+/*podtytul*/
+
+#podtytul{
+    width: 50%;
+    font-size: 24px;
+}
+
+#podtytul.small{
+    visibility: hidden;
+}
+
+
+
+#header.smaller {
+	height: 55px;
+    box-shadow:  1px 1px 1px #2d2d2d;
+}
+
+nav{
+    width:20%;
+    margin-top: 80px;
+    text-align: right;
+   justify-content: space-between;
+    
+}
+
+nav a{
+    text-transform: uppercase;
+    justify-content: flex-end;
+    font-size: 1.2em;
+    padding: 10px;
+}
+nav a:hover{
+   text-shadow: 1px 1px 2px #2d2d2d;
+}
+
+footer{
+	font-weight: normal;
+	justify-content: center;
+    font-size: 0.9em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer p{width: 30%;}
+
+
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li a{ color: #000;
+margin-left: 20px;
+flex: 0 1 auto;}
+
+
+#karta{
+      background-image: url('../wzor.png');
+      background-repeat: no-repeat;
+      margin-top: 40px;
+      min-height: 400px;
+      width: 100%;
+      color: #32e9bc;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#kartaNapis{
+    margin: 0 auto;
+      padding: 20px;
+      color: #2d2d2d;
+      font-size: 130px;
+    text-align: center;
+}
+
+#kartaTresc{
+    width: 100%;
+    
+}
+
+#zdjK{
+    margin-left: 33px;
+    margin-top:68px;
+}
+#imieK{
+    font-size: 28px;
+    width:210px;
+    text-align: center;
+}
+#krajK{ width:210px;
+    text-align: center;}
+#pozK{
+    margin-left: 180px;
+    margin-top: 40px;
+}
+
+
+.tresc {
+    width: 100%;
+}
+
+#losuj{
+    padding-top: 80px;
+    margin-top: 370px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tresc p{
+    margin: 40px 0 40px;
+}
+
+#pozycja{
+    width: 30%; 
+}
+
+#pozycja select{
+    width: 100%;
+}
+
+
+
+/*****************************FORMULARZ */
+
+form{
+     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+select{
+    border: 1px solid #0da37e;
+    width: 50%;
+    padding: 20px;
+    margin-top: 15px;
+    width: 100px;
+}
+
+form input, textarea{
+    border: 1px solid #0da37e;
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.submit{
+    width: 30%;
+    background: #0da37e;
+    border: 0px;
+    min-width: 58px;
+    color: #fff;
+    padding: 20px;
+    font-weight: bold;
+}
+.submit:hover{
+    opacity: 0.6;
+}
+
+#losowanie{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+
+
+
+/*media screens*/
+.mobile{
+    visibility: hidden;
+}
+
+
+
+@media screen and (max-width: 640px){
+    
+    
+    #headerTxt{
+    width: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center; 
+}
+/*tytul*/
+
+#tytul{
+    margin-left: 20px;
+    width: 100%;
+    font-size: 0.8em;
+}
+#tytul a{text-decoration: none; color: #FFF;}
+#tytul.small{
+    visibility: hidden;
+    margin-top: 46px;
+}
+
+
+
+
+
+#header.smaller {
+	height: 55px;
+    box-shadow:  1px 1px 1px #2d2d2d;
+}
+
+nav{
+    width:100%;
+    margin-top: 00px;
+    display: block;
+    text-align: center;
+   justify-content: space-between;
+    
+}
+
+ 
+    
+    header{
+        max-width: 100%;
+       
+    }
+
+    #tytul{
+    width: 100%;
+    font-size: 70px;
+    margin-left: 10px;
+}
+    #podtytul{
+    width: 100%;
+    margin-left: 10px;
+}
+ 
+    .submit{width:100%; margin-top: 10px; margin-left: 0px;}
+    .form input, textarea{width: 100%;}
+    #pozycja{width:100%;}
+    
+   #kartaNapis{
+        font-size: 40px;
+        max-width: 100%;
+    }
+    
+    
+
+    
+}
+
+
+
+@media screen and (min-width:641px) and (max-width: 960px){
+nav{
+    max-width:30%;
+     display: block;
+    text-align: center;
+   justify-content: space-between;
+    
+}
+    
+       #podtytul{
+    width: 100%;
+    margin-left: 10px;
+}
+    
+    
+    #karta{
+   
+      margin-top: 40px;
+      min-height: 0px;
+      min-width: 0px;
+      width: 100%;
+      color: #32e9bc;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      align-items: center;
+}
+
+    
+    
+    #tytul{
+    margin-left: 20px;
+    width: 50%;
+    font-size: 0.8em;
+}
+#tytul a{text-decoration: none; color: #FFF;}
+#tytul.small{
+    margin-top: 96px;
+}
+
+nav{
+    width:100%;
+    margin-top: 80px;
+    display: block;
+    text-align: center;
+   justify-content: space-between;
+    
+}
+   
+
+}
