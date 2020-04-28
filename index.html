@@ -1,257 +1,319 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-	<title>Portfolio DN</title>
-	<link  rel="stylesheet" href="css/style.css" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Portfolio DN</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+    />
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
-
     <script type="text/javascript">
-        
-                $(document).ready(function(){
-                    //ukrycie innych niz 1
-                    $('.tresc').not("#tresc1").hide();
-                    //pokazanie po klinieciu
-                    $('.pokaz').click(function () {
-                        $("a.aktywny").removeClass("aktywny");
-                        $(this).addClass("aktywny");
-                        $('#tresc' + $(this).attr('target')).fadeIn(300).siblings('.tresc').hide();;
-                    });
-
-
-                });
+      $(document).ready(function () {
+        //ukrycie innych niz 1
+        $(".tresc").not("#tresc1").hide();
+        //pokazanie po klinieciu
+        $(".pokaz").click(function () {
+          $("a.aktywny").removeClass("aktywny");
+          $(this).addClass("aktywny");
+          $("#tresc" + $(this).attr("target"))
+            .fadeIn(300)
+            .siblings(".tresc")
+            .hide();
+        });
+      });
     </script>
-</head>
-<body>
+  </head>
+  <body>
+    <nav class="kontener">
+      <div class="rzad">
+        <a class="pokaz aktywny" target="1">O mnie</a>
+        <a class="pokaz" target="2">Skrypty i strony</a>
+        <a class="pokaz" target="3">Grafika</a>
+        <a class="pokaz" target="4">Kontakt</a>
+      </div>
+    </nav>
 
+    <div class="kontener">
+      <div class="tresc" id="tresc1">
+        <h1>O mnie</h1>
 
+        <div id="meImg">
+          <img alt="zdjecie" src="img/zdjecie.jpg" />
+        </div>
+        <p>
+          Cześć! Jestem Dominik, 22-letni student Informatyki na Uniwersytecie
+          Pedagogicznym im. KEN w Krakowie. Swoją przyszłość wiążę z
+          projektowaniem stron internetowych, a konkretniej z frontend'em.
+          Interesuję się piłką nożną i filmem, w wolnym czasie lubię także
+          "podłubać" w Photoshopie.
+        </p>
 
-<nav class="kontener">
-  <div class="rzad">
-    <a class="pokaz aktywny" target="1">O mnie</a>
-    <a class="pokaz" target="2">Skrypty i strony</a>
-    <a class="pokaz" target="3">Grafika</a>
-    <a class="pokaz" target="4">Kontakt</a>
-  </div>
-</nav>
+        <h2>Obecnie w stopniu przynajmniej podstawowym znam:</h2>
 
-<div class="kontener">
-  <div class="tresc" id="tresc1">
-    <h1>O mnie</h1>
-      
-    <div id="meImg"> 
-        <img alt="zdjecie" src="img/zdjecie.jpg">
-    </div> 
-    <p>
-        Cześć! Jestem Dominik, 21-letni student trzeciego roku Informatyki na Uniwersytecie Pedagogicznym im. KEN w Krakowie. Swoją przyszłość wiążę z projektowaniem stron internetowych, a konkretniej z frontend'em. Interesuję się piłką nożną i filmem, w wolnym czasie lubię także "podłubać" w Photoshopie. Od niedawna uczę się także gry na keyboardzie.
-</p>
-      
-      
-      <h2>Obecnie w stopniu przynajmniej podstawowym znam:</h2>
-      
-      <ul>
+        <ul>
           <li>HTML</li>
-          <li>CSS3 (wraz z media queries oraz flexbox)</li>
+          <li>CSS3</li>
           <li>Bootstrap</li>
-          <li>JavaScript (obecnie poznaję ES6)</li>
+          <li>JavaScript</li>
+          <li>Vue.js</li>
           <li>jQuery</li>
           <li>PHP</li>
-      </ul>
-     
-      
-  </div>
-  <div class="tresc" id="tresc2">
-    <h1>Skrypty i strony</h1>
-    <p>Poniżej znajdują się niektóre z moich projektów:</p>
-      
-      
-      <div id="skrypty">
-          
-           <a href="https://dn-skaut.000webhostapp.com/index.html" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/skauting.jpg" alt="stronaSkauting">
-            <div class="opis">
-                <p class="opistxt">
-                    <strong>Baza danych sieci skautów klubu piłkarskiego</strong><br>
-                    Projekt obsługi prostej bazy danych MySql z wykorzystaniem PHP oraz Bootstapa.</p>
-            </div>
-        </div></a>
-          
-           <a href="skrypty/lotek.html" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/lotek.jpg" alt="lotek">
-            <div class="opis">
-                <p class="opistxt">
-                    <strong>Lotek</strong><br>
-                    Prosty skrypt symulujący działanie lotka napisany w języku JavaScript.</p>
-            </div>
-        </div></a>
-          
-          
-          
-          <a href="skrypty/zegary.html" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/zegary.jpg" alt="zegary">
-            <div class="opis">
-                <p class="opistxt">
-                    <strong>Zegary</strong><br>
-                    Prosty skrypt napisany w języku JavaScript.</p>
-            </div>
-        </div></a>
-          
-          
-          
-          <a href="skrypty/quiz.html" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/quiz.jpg" alt="quiz">
-            <div class="opis">
-                <p class="opistxt">
-                    <strong>Quiz</strong><br>
-                    Prosty skrypt z quizem zawierającym kilka pytań odnośnie klubu Chelsea FC.</p>
-            </div>
-        </div></a>
-
-        
-        
-        
-        
-        
-      
-      
+        </ul>
       </div>
-      
-      
-  </div>
-  <div class="tresc" id="tresc3">
-    <h1>Grafika</h1>
-    <p>Przykładowe projekty graficzne wykonane w programie Adobe Photoshop:</p>
-      
-      
-      
-      
-      
-          <div id="grafiki">
-          
-           <a href="img/eden.jpg" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/eden.jpg" alt="hazard_wallpaper">
-            <div class="opis">
+      <div class="tresc" id="tresc2">
+        <h1>Skrypty i strony</h1>
+        <p>Poniżej znajdują się niektóre z moich projektów:</p>
+
+        <h3 class="mt-3 mb-3">PHP, MySql:</h3>
+
+        <div class="skrypty">
+          <a
+            href="https://dn-skaut.000webhostapp.com/index.html"
+            target="_blank"
+          >
+            <div class="img_hoverek">
+              <img src="img/skauting.jpg" alt="stronaSkauting" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Eden Hazard</strong><br>
-                    Tapeta na pulpit z zawodnikiem londyńskiej Chelsea.</p>
-            </div>
-        </div></a>
-              
-              
-              
-              
-               <a href="img/legends.jpg" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/leg169.jpg" alt="legends_wall">
-            <div class="opis">
+                  <strong>Baza danych sieci skautów klubu piłkarskiego</strong
+                  ><br />
+                  Projekt obsługi prostej bazy danych MySql z wykorzystaniem PHP
+                  oraz Bootstapa.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="https://dn-skaut.000webhostapp.com/2017/" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/blog.jpg" alt="stronaBlog" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Legends</strong><br>
-                    Tapeta na pulpit z trzema wielkimi piłkarzami, którzy jednak nie zawsze grali fair.</p>
-            </div>
-        </div></a>
-              
-              
-              
-               <a href="img/wrz16.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/wrz16.png" alt="call_september2016">
-            <div class="opis">
+                  <strong>Prosty blog w PHP</strong><br />
+                  Projekt blogu z wykorzystaniem bazy danych MySql, PHP oraz
+                  Bootstapa.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <h3 class="mt-3 mb-3">JavaScript:</h3>
+        <div class="skrypty">
+          <a href="skrypty/lotek.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/lotek.jpg" alt="lotek" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Wrzesień 2016</strong><br>
-                    Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea FC.</p>
-            </div>
-        </div></a>
-              
-              
-              
-               <a href="img/kw17.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/kw17.png" alt="call_april2017">
-            <div class="opis">
+                  <strong>Lotek</strong><br />
+                  Prosty skrypt symulujący działanie lotka napisany w języku
+                  JavaScript.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="skrypty/zegary.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/zegary.jpg" alt="zegary" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Kwiecień 2017</strong><br>
-                    Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea FC.</p>
-            </div>
-        </div></a>
-              
-              
-              
-               <a href="img/aguero.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/aguero.png" alt="aguero_sign">
-            <div class="opis">
+                  <strong>Zegary</strong><br />
+                  Prosty skrypt napisany w języku JavaScript.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="skrypty/quiz.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/quiz.jpg" alt="quiz" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Sergio Aguero</strong><br>
-                    Sygnatura forumowa z zawodnikiem Manchesteru City.</p>
-            </div>
-        </div></a>
-              
-                   <a href="img/torres.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/torres.png" alt="ozil_sign">
-            <div class="opis">
+                  <strong>Quiz</strong><br />
+                  Prosty skrypt z quizem zawierającym kilka pytań odnośnie klubu
+                  Chelsea FC.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+        <h3 class="mt-3 mb-3">Bootstrap:</h3>
+        <div class="skrypty">
+          <a href="boot/edu/index.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/edu.jpg" alt="edu" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Fernando Torres</strong><br>
-                    Sygnatura forumowa z hiszpańskim goleadorem.</p>
-            </div>
-        </div></a>
-              
-              
-                 <a href="img/kerr.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/kerr.png" alt="kerr_sign">
-            <div class="opis">
+                  <strong>Layout Edusite</strong><br />
+                  Zakodowanie widoku strony w oparciu o plik .psd z
+                  wykorzystaniem Bootstapa.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="boot/medic/index.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/medic.jpg" alt="med" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Miranda Kerr</strong><br>
-                    Sygnatura forumowa z australijską modelką.</p>
-            </div>
-        </div></a>
-              
-              
-              
-               <a href="img/ba.png" target="_blank"> <div class="img_hoverek">
-             
-                <img src="img/ba.png" alt="ba_sign">
-            <div class="opis">
+                  <strong>Layout Medical</strong><br />
+                  Zakodowanie widoku strony w oparciu o plik .psd z
+                  wykorzystaniem Bootstapa.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="boot/hasi/index.html" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/hasi.jpg" alt="hasi" />
+              <div class="opis">
                 <p class="opistxt">
-                    <strong>Demba Ba</strong><br>
-                    Sygnatura forumowa z senegalskim napastnikiem.</p>
-            </div>
-        </div></a>  
+                  <strong>Layout Hasi</strong><br />
+                  Zakodowanie widoku strony w oparciu o plik .psd z
+                  wykorzystaniem Bootstapa.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
       </div>
-      
-      
-      
-      
-      
-      
-      
-  </div>
-    
-    <div class="tresc" id="tresc4">
-    <h1>Kontakt</h1>
-    <p>Jeżeli chcesz się ze mną skontaktować wybierz jedną z poniższych opcji:</p>
-        
-    <div id="kontakt">
-        <a href="mailto:d.nalepa@interia.pl"  ><img src="img/email.png" alt="email" id="email"></a>
-        <a href="https://www.facebook.com/skaaaf" target="_blank"  ><img src="img/fb.png" alt="facebook" id="fb"></a>
-        <a href="https://www.instagram.com/scafley/" target="_blank"  ><img src="img/ig.png" alt="insta" id="ig"></a>
-    </div>    
-  </div>
+      <div class="tresc" id="tresc3">
+        <h1>Grafika</h1>
+        <p>
+          Przykładowe projekty graficzne wykonane w programie Adobe Photoshop:
+        </p>
 
-</div>
+        <div id="grafiki">
+          <a href="img/eden.jpg" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/eden.jpg" alt="hazard_wallpaper" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Eden Hazard</strong><br />
+                  Tapeta na pulpit z zawodnikiem londyńskiej Chelsea.
+                </p>
+              </div>
+            </div></a
+          >
 
-<footer class="kontener">
-    2018 © Dominik Nalepa
-</footer>
-	
-</body>
+          <a href="img/legends.jpg" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/leg169.jpg" alt="legends_wall" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Legends</strong><br />
+                  Tapeta na pulpit z trzema wielkimi piłkarzami, którzy jednak
+                  nie zawsze grali fair.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/wrz16.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/wrz16.png" alt="call_september2016" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Wrzesień 2016</strong><br />
+                  Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea
+                  FC.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/kw17.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/kw17.png" alt="call_april2017" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Kwiecień 2017</strong><br />
+                  Tapeta na pulpit wraz z terminarzem spotkań drużyny Chelsea
+                  FC.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/aguero.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/aguero.png" alt="aguero_sign" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Sergio Aguero</strong><br />
+                  Sygnatura forumowa z zawodnikiem Manchesteru City.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/torres.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/torres.png" alt="ozil_sign" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Fernando Torres</strong><br />
+                  Sygnatura forumowa z hiszpańskim goleadorem.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/kerr.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/kerr.png" alt="kerr_sign" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Miranda Kerr</strong><br />
+                  Sygnatura forumowa z australijską modelką.
+                </p>
+              </div>
+            </div></a
+          >
+
+          <a href="img/ba.png" target="_blank">
+            <div class="img_hoverek">
+              <img src="img/ba.png" alt="ba_sign" />
+              <div class="opis">
+                <p class="opistxt">
+                  <strong>Demba Ba</strong><br />
+                  Sygnatura forumowa z senegalskim napastnikiem.
+                </p>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+
+      <div class="tresc" id="tresc4">
+        <h1>Kontakt</h1>
+        <p>
+          Jeżeli chcesz się ze mną skontaktować wybierz jedną z poniższych
+          opcji:
+        </p>
+
+        <div id="kontakt">
+          <a href="mailto:d.nalepa@interia.pl"
+            ><img src="img/email.png" alt="email" id="email"
+          /></a>
+          <a href="https://www.facebook.com/skaaaf" target="_blank"
+            ><img src="img/fb.png" alt="facebook" id="fb"
+          /></a>
+          <a href="https://www.instagram.com/scafley/" target="_blank"
+            ><img src="img/ig.png" alt="insta" id="ig"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="kontener">
+      2018 © Dominik Nalepa
+    </footer>
+  </body>
 </html>
